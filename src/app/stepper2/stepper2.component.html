@@ -1,0 +1,100 @@
+<div class="main">
+    <form #userForm="ngForm" >
+        <div style="color: blue;" *ngFor="let item of displaydata()">
+         <div class="location">
+             <p>7.What is location</p>
+
+        <div class="select"><p>Select City  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select Venue</p></div>
+        <mat-form-field class="city" appearance="fill" >
+            <select matNativeControl required  name="city" [ngModel]="item.city">
+                <option value="Port Louis">Port Louis</option>
+                <option>Beau Bassin-Rose Hill</option>
+                <option>Curepipe</option>
+                <option>Quatres Bornes</option>
+                <option>Vacoas-Pheonix</option>
+            </select>
+        </mat-form-field>
+
+    
+        <mat-form-field class="venue" appearance="fill" >
+            <select matNativeControl required name="venue" [ngModel]="item.venue">
+                <option value="Port Louis">Port Louis</option>
+                <option>Beau Bassin-Rose Hill</option>
+                <option>Curepipe</option>
+                <option>Quatres Bornes</option>
+                <option>Vacoas-Pheonix</option>
+            </select>
+        </mat-form-field>
+
+        <div class="address"><p>Or type address if you are not find any</p></div>
+        <input type="text" >
+
+        <div class="info"> <p> If you are Venue manager you can Create your Venue. After approval <br> you will find your locaions here in Menu -> Venue</p></div>
+    </div>
+
+    <div class="price">
+        <P>8.What is the price</P> 
+
+        <mat-button-toggle-group  name="toggle2" aria-label="Font Style" [ngModel]="item.toggle2">
+            <mat-button-toggle value="free">Free</mat-button-toggle>
+            <mat-button-toggle value="paid">Paid</mat-button-toggle>
+        </mat-button-toggle-group>
+
+        <div class="incrementer">
+            <P>How many different pricing?</P> 
+            <button class="minus" type="button" (click)="minus()">-</button>
+            <input type="text" [value]="quantity" name="pricing" [ngModel]="item.pricing" >
+            <button class="plus"  type="button" (click)="plus()">+</button>
+        </div>
+
+        <div  *ngIf="show">
+            <p style="margin-left: -200px;">Ticket Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price &nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Currency</p>
+           
+                <div class="ticket"  *ngFor="let item of [].constructor(quantity); let i = index">
+                <input type="text" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-form-field class="venue" appearance="fill" >
+                    <select matNativeControl required>
+                        <option value="Euro">Euro</option>
+                        <option>US Dollar</option>
+                        <option>Indian Rupee</option>
+                        <option>US Dollar</option>
+                        <option>CFP Franc</option>
+                        <option>Pound Sterling</option>
+                        <option>Yen</option>
+                        <option>Australian Dollar</option>
+                        <option>Rupees</option>
+                    </select>
+                </mat-form-field>
+            </div> 
+        </div>
+        
+        
+        <p>Which credit cards do you access?</p>
+        <br><br>
+
+        <div class="credit_cards"> 
+            <input style="color: rgb(17, 211, 17);"   type="checkbox" name="credit_cards" *ngFor="let credit_cards of credit_cards"><br>
+           {{credit_cards}} 
+        </div>
+        
+
+        <!-- <div class="credit_cards2"> 
+            <div class="box5"><input type="checkbox" id="card" ></div>
+            <div class="box6"><input type="checkbox" id="card" ></div>
+            <div class="box7"><input type="checkbox" id="card" ></div>
+            <div class="box8"><input type="checkbox" id="card"></div>
+        </div> -->
+        
+    </div>
+</div>
+    </form>
+</div>
+

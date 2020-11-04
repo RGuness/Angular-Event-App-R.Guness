@@ -1,0 +1,33 @@
+<mat-horizontal-stepper >
+    <mat-step label="General Information">
+        <app-stepper1></app-stepper1>
+    <div class="buttons">
+        <button mat-button matStepperNext>Next</button>
+    </div>
+    </mat-step>
+
+    <mat-step label="Pricing and Location"> 
+         <app-stepper2></app-stepper2>
+        <div class="buttons">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    
+    <mat-step label="Additional Information">
+        <app-stepper3></app-stepper3>
+        
+        <div class="buttons">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+
+    <mat-step label="Information Summary">
+       <!-- <app-stepper4></app-stepper4>  -->
+       
+        <div class="buttons">
+            <button mat-button matStepperPrevious>Back</button>
+        </div>
+      </mat-step>
+  </mat-horizontal-stepper>

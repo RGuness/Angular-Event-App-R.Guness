@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="logo" >
+    <a [routerLink]="['create_event']" ><img src="/assets/images/logo.PNG" width="200px"></a>
+    </div>
+
+    <div class="search-container">
+      <input type="text" class="searchTerm" placeholder=" Search...." >
+      <div class="searchButton" ></div>
+    </div>
+
+    <div class="notification">
+      <img class="circular--square" src="/assets/images/notification_icon.png" />
+    </div>
+  
+    <div>
+      <button type="button"   [routerLink] = "['main_stepper']"   class="create_button">CREATE EVENT</button>
+    </div>
+
+    <div class="user_image">
+      <img class="circular--square" src="/assets/images/myimage.jpg" />
+    </div>
+</div>  

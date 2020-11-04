@@ -1,0 +1,177 @@
+.main{  
+    .restriction{
+        width: 1300px;
+        height:250px;
+        border-style: solid;
+        border-color: rgb(164, 208, 243);
+        padding-left: 500px;
+        border-radius: 10px;
+
+        p{
+            font-size: 20px;
+            padding-top: 30px;
+            padding-left: 250px;
+            font-weight: 500;
+            color: rgb(0, 0, 0);
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            }
+    
+        input{
+            margin-top: 30px;
+            width: 50px;
+            height: 20px;
+            margin-left: 120px;
+        }
+        label{
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    }
+
+    .numpeople{
+        margin-top: 30px;
+        width: 1300px;
+        height:200px;
+        border-style: solid;
+        border-color: rgb(164, 208, 243);
+        padding-left: 500px;
+        border-radius: 10px;
+
+        p{
+            font-size: 20px;
+            padding-top: 30px;
+            padding-left: 250px;
+            font-weight: 500;
+            color: rgb(0, 0, 0);
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        }
+
+        button.minus{
+            background-color: rgb(115, 152, 233);
+            width: 60px;
+            border-radius: 10px 1px 1px 10px ;
+            height: 45px;
+            margin-left: 310px;
+            font-size: 30px;
+            border: rgb(115, 152, 233);
+            }
+
+        button.plus{
+            background-color: rgb(115, 152, 233);
+            font-size: 30px;
+            width: 60px;
+            height: 45px;
+            border: rgb(115, 152, 233);
+            border-radius: 1px 10px 10px 1px ;
+        }
+        
+        input{
+            width: 110px;
+            height: 40px;
+            text-align: center;
+            margin-top: 26px;
+            font-size: 20px;
+            border-radius: 10px;
+
+        }
+    }
+
+    .specialguest{
+        margin-top: 30px;
+        width: 1300px;
+        height:900px;
+        border-style: solid;
+        border-color: rgb(164, 208, 243);
+        padding-left: 500px;
+        border-radius: 10px;
+    }
+
+    p{
+        font-size: 20px;
+        padding-top: 30px;
+        padding-left: 250px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    }
+
+    button.minus{
+        background-color: rgb(115, 152, 233);
+        width: 60px;
+        border-radius: 10px 1px 1px 10px ;
+        height: 45px;
+        margin-left: 310px;
+        font-size: 30px;
+        border: rgb(115, 152, 233);
+        }
+
+    button.plus{
+        background-color: rgb(115, 152, 233);
+        font-size: 30px;
+        width: 60px;
+        height: 45px;
+        border: rgb(115, 152, 233);
+        border-radius: 1px 10px 10px 1px ;
+    }
+    
+    input{
+        width: 110px;
+        height: 40px;
+        text-align: center;
+        margin-top: 26px;
+        font-size: 20px;
+        border-radius: 10px;
+
+    }
+
+    .upload{
+        margin-right: 500px;
+
+        .ngx-dropzone-label{
+            margin-bottom:50px ;
+            color: tomato;
+            background-color: tomato;
+        }
+    }
+
+    textarea{
+        border-color: rgb(93, 162, 240);
+        width: 900px;
+        height: 60px;
+        margin-top: 10px;
+        margin-left: -10px;
+        font-size: 20px;
+        color: rgb(6, 24, 36);
+    }
+    
+    .authority{
+        margin-top: 30px;
+        width: 1300px;
+        height:400px;
+        color: rgb(0, 0, 0);
+        border-style: solid;
+        border-color: rgb(164, 208, 243);
+        padding-left: 500px;
+        border-radius: 10px;
+
+
+        mat-button-toggle-group{
+            height: 50px;
+            background-color: rgb(50, 169, 238);
+            margin-top: 50px;
+            margin-left:200px;
+            border-radius: 20px;
+        }
+        mat-button-toggle{
+            width: 200px;
+            height: 80px;
+            color: rgb(51, 169, 228);
+            font-size: 20px;
+        }
+        mat-button-toggle:hover{
+            background: #0a598a;
+            color: white;
+        }
+    }
+}

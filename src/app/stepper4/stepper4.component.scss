@@ -1,0 +1,23 @@
+.toggle{
+    
+
+    mat-button-toggle-group{
+        height: 50px;
+        background-color: rgb(228, 232, 235);
+        margin-top: 50px;
+        margin-left:200px;
+        border-radius: 20px;
+    }
+    mat-button-toggle{
+        width: 200px;
+        height: 80px;
+        color: rgb(51, 169, 228);
+        font-size: 20px;
+    }
+    mat-button-toggle:hover{
+        background: #0a598a;
+        color: rgb(179, 47, 47);
+    }
+
+
+}

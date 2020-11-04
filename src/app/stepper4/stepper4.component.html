@@ -1,0 +1,38 @@
+<!-- <p>stepper4 works!</p> -->
+<!-- <form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+
+
+    <div class=" form-group">
+        <label>Username</label>
+        <input type="text"  formControlName="username" class="form-control"><br>
+
+        <label>password</label>
+        <input type="text" formControlName="password" >
+    </div>
+
+    <button type="submit">Submit form</button>
+</form> -->
+
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+
+    <div style="color: blue;" *ngFor="let item of userdetailslist">
+        <input type="text" name="Username" [ngModel]= "item.name"><br><br>
+        <input type="text" name="address" [ngModel]="item.address"><br><br>
+
+        <div class="toggle">
+                <mat-button-toggle-group aria-label="Font Style" name="toggle"  [ngModel]="item.toggle" >
+                    <mat-button-toggle  value="private">Private</mat-button-toggle>
+                    <mat-button-toggle value="public">Public</mat-button-toggle>
+                </mat-button-toggle-group>
+        </div><br>
+        <button type="submit">Submit form</button>
+    </div>
+</form>
+
+<div style="color: blue;" *ngFor="let item of userdetailslist">
+    <div > {{ item.name }} </div>
+    <div>{{ item.address}}</div>
+</div>
+
+<app-info-summary></app-info-summary>

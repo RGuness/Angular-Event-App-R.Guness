@@ -1,0 +1,68 @@
+<div class="main">
+    <form #userForm="ngForm" >
+        <div style="color: blue;" *ngFor="let item of displaydata()">
+    <div class="restriction">
+        <p>9.Any restriction in regards of your audience?</p>
+
+        <input type="checkbox" id="card"><label>None</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="card"> <label>Children Only</label>
+        <input type="checkbox" id="card"><label>Women Only </label>
+        <br> <br>
+        <input type="checkbox" id="card"><label>Event 18+</label>
+        <input type="checkbox" id="card"><label>No Children</label>
+        <input type="checkbox" id="card"><label>Senior Citizen </label>
+    </div>
+
+    <div class="numpeople">
+        <p>10.How many people do you expect to see?</p>
+        <button class="minus" type="button" (click)="minuspeople()">-</button>
+        <input type="text" [value]="peoplequantity" name="numOfPeople" [ngModel]="item.numOfPeople">
+        <button class="plus"  type="button" (click)="pluspeople()">+</button>
+    </div>
+
+    <div class="specialguest">
+        <p>11.How many special guests wiil there be?</p>
+        <button class="minus" type="button" (click)="minus()">-</button>
+        <input type="text" [value]="quantity" name="numOfspecialguest" [ngModel]="item.numOfspecialguest">
+        <button class="plus"  type="button" (click)="plus()">+</button>
+
+        <div *ngIf="show">
+            <p>What are the names of your special guests?</p>
+            <div *ngFor="let item of [].constructor(quantity); let i = index"> 
+                <input type="text" style="width:400px;margin-left:250px">
+            </div>
+        </div>
+            
+            <p style="margin-left:110px;">Upload an image</p>
+            <div class="upload"> 
+                <ngx-dropzone (change)="onSelect($event)">
+                     <ngx-dropzone-label>Drag & Drop to Upload</ngx-dropzone-label>
+                         <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [multiple]="true" [removable]="true" (removed)="onRemove(f)">
+                             <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                         </ngx-dropzone-image-preview>
+                 </ngx-dropzone>
+             </div> 
+
+             <img src="{{item.event_image}}" width="200" height="150px" style="margin-left: 150px; margin-top: 20px;">
+
+             <p style="margin-left:80px;">Any Additional Information?</p>
+             <textarea  name="additionalinfo" [ngModel]="item.additionalinfo"> </textarea> 
+     </div>
+
+     <div class="authority">
+        <p>12.Any Authorities need to be notified?</p>
+        <mat-button-toggle-group  name="fontStyle" aria-label="Font Style" name="toggle_authority" [ngModel]="item.toggle_authority">
+            <mat-button-toggle value="Yes" (click)=displayyes()>Yes</mat-button-toggle>
+            <mat-button-toggle value="No" (click)=displayno()>No</mat-button-toggle>
+        </mat-button-toggle-group><br>
+
+        
+        <div class="select" *ngIf="display_authority" style="margin-left:130px;margin-top:50px;">
+            <input type="checkbox" id="card"><label style="margin-left:-30px;font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Police</label >
+            <input type="checkbox" id="card"><label style="margin-left:-30px; font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Fire Department</label>
+            <input type="checkbox" id="card"><label style="margin-left:-30px; font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Traffic Control</label>
+        </div>
+    </div>
+</div>
+</form>
+</div>

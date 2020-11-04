@@ -1,0 +1,16 @@
+<div class="main">
+    <div class="details" *ngFor="let list of eventlist">
+        <div class="title"> {{list.event_title}} </div>
+        <div class="image">
+            <a [routerLink] = "['event_details' , list.event_title]"><img src={{list.event_image}} width="300px" height="300px"> </a>
+        </div>
+        <div class="venue"> {{list.venue}}</div>
+        <div class="start_date"> <p> {{list.start_date}} </p></div>
+        <br><br><br>
+</div>
+
+
+<div class="full_details">
+<!-- <app-event-full-details></app-event-full-details> -->
+<app-stepper></app-stepper>
+</div>

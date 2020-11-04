@@ -1,0 +1,81 @@
+[
+    {
+        "category":"Music",
+        "event_image":"https://www.thebusinesswomanmedia.com/wp-content/uploads/2016/02/events.jpg",
+        "event_title": "Holiday Festival",
+        "venue": "Quatres Bornes",
+        "start_date":"10/14/2020",
+        "toggle":"private",
+        "schedule1":"Weekly",
+        "schedule2":"Every 1st day of the year",
+        "numOfPeople": "20",
+        "numOfspecialguest":"14",
+        "event_about": "This is a my 24th birthday event",
+        "additionalinfo":"Food and drinks will be served on that occasion.",
+        "toggle2":"paid",
+        "pricing": "15"
+       
+    },
+    {
+        "event_image":"https://previews.123rf.com/images/oxygen8/oxygen81802/oxygen8180200161/95151189-family-party-on-a-white-background-vector-illustration-funny-children-character-with-parents-jumping.jpg",
+        "event_title": " Kids Festival",
+        "venue": "Quatres Bornes",
+        "start_date":"10/14/2020",
+        "toggle":"public",
+        "schedule1":"Weekly",
+        "schedule2":"Every 1st day of the year",
+        "numOfPeople": "30",
+        "numOfspecialguest":"5",
+        "event_about": "This is a kid's 5th anniversary party",
+        "additionalinfo":"Food and drinks will be served on that occasion.",
+        "toggle2":"free",
+        "pricing": "2"
+    },
+    {
+        "event_image":"https://previews.123rf.com/images/jackf/jackf1906/jackf190600407/124075382-large-happy-english-family-having-fun-during-children%E2%80%99s-birthday-party.jpg",
+        "event_title": "Family Party",
+        "venue": "Curepipe",
+        "start_date":"10/14/2020",
+        "toggle":"private",
+        "schedule1":"Weekly",
+        "schedule2":"Every 1st day of the year",
+        "numOfPeople": "15",
+        "event_about": "This is a my Family music event",
+        "numOfspecialguest":"3",
+        "additionalinfo":"Food and drinks will be served on that occasion.",
+        "toggle2":"paid",
+        "pricing": "27"
+    },
+    {
+        "event_image":"https://www.thebusinesswomanmedia.com/wp-content/uploads/2016/02/events.jpg",
+        "event_title": "Youngsters Party",
+        "venue": "Quatres Bornes",
+        "start_date":"10/14/2020",
+        "toggle":"public",
+        "event_about": "This is holiday party",
+        "schedule1":"Weekly",
+        "schedule2":"Every 1st day of the year",
+        "numOfPeople": "100",
+        "numOfspecialguest":"20",
+        "additionalinfo":"Food and drinks will be served on that occasion.",
+        "toggle2":"free",
+        "pricing": "8"
+    },
+    {
+        "event_image":"https://bdentertainers.com/wp-content/uploads/2019/08/Holiday-party.jpg",
+        "event_title": "Christmas Festival",
+        "venue": "Quatres Bornes",
+        "start_date":"25/12/2020",
+        "toggle":"private",
+        "schedule1":"Daily",
+        "schedule2":"Every 1st day of the year",
+        "event_about": "Christmas Party",
+        "numOfPeople": "75",
+        "numOfspecialguest":"17",
+        "additionalinfo":"Food and drinks will be served on that occasion.",
+        "toggle2":"paid",
+        "pricing": "5"
+
+    }
+    
+]

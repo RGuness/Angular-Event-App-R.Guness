@@ -1,0 +1,18 @@
+
+ <div class="details" style="color: blue;" *ngFor="let list of displaydata()">
+    <div class="title" style="color: blue;"><p style="color: rgb(26, 230, 135); font-size: 20px;font-family:cursive;">Event Title : {{list.event_title}}</p> </div>
+    <div class="start_date"><p style="color: rgb(230, 158, 26); font-size: 20px;font-family:cursive;"> Start date : {{list.start_date}}</p></div>
+    <div class="venue" style="color: blue;"> <p style="color: rgb(230, 158, 26); font-size: 20px;font-family:cursive;">Event Venue : {{list.venue}} </p></div>
+    <div class="description"> <p style="color: rgb(230, 158, 26); font-size: 20px;font-family:cursive;">Event private/public : {{list.toggle}} </p></div> 
+    <div class="description"> <p style="color: rgb(230, 158, 26); font-size: 20px;font-family:cursive;">Event happening : {{list.schedule1}} </p></div>             
+    <div class="description"> <p style="color: rgb(230, 158, 26); font-size: 20px;font-family:cursive;">Event happening on : {{list.schedule2}} </p></div> 
+    <div class="numOfPeople"> <p style="color: rgb(230, 158, 26); font-size: 20px;font-family:cursive;">Number of People invited : {{list.numOfPeople}} </p></div> 
+    <div class="description"> <p style="color: rgb(230, 158, 26); font-size: 20px;font-family:cursive;">Number of Special Guests invited {{list.numOfspecialguest}} </p></div> 
+    <div class="additionalinfo"> <p style="color: rgb(230, 158, 26); font-size: 20px;font-family:cursive;">Additional Information : {{list.additionalinfo}} </p></div>
+
+
+    <form>
+        <label >Event Title</label>
+        <input type="text" required name="title"[(ngModel)]="list.event_title">
+    </form>
+</div>

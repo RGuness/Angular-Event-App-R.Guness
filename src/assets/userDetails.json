@@ -1,0 +1,24 @@
+[
+    {
+        "btn":"Music",
+        "toggle":"private",
+        "schedule1":"Weekly",
+        "schedule2":"Every 1st day of the year",
+        "start_date":"10/14/2020",
+        "toggle2":"paid",
+        "end_date":"10/7/2020",
+        "start_time":"6:00 PM",
+        "end_time":"8:00 PM",
+        "event_title": "Birthday Party",
+        "event_about": "This is a my 24th birthday event",
+        "image": "https://previews.123rf.com/images/satariel/satariel1501/satariel150100010/35072573-beautiful-bright-day-summer-scenery-lake-and-trees-.jpg",
+        "city": "Curepipe",
+        "venue": "Quatres Bornes",
+        "pricing": "2",
+        "numOfPeople": "3",
+        "numOfspecialguest":"4",
+        "event_image":"https://www.thebusinesswomanmedia.com/wp-content/uploads/2016/02/events.jpg",
+        "additionalinfo":"Food and drinks will be served on that occasion.",
+        "toggle_authority":"Yes"
+    }
+]

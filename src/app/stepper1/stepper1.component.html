@@ -1,0 +1,104 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div style="color: blue;" *ngFor="let item of displaydata()">
+        <div style="color: rgb(15, 15, 27);">
+            <!-- {{userForm.value | json}} -->
+        <!-- {{userModel | json}} <br> -->
+        <!-- {{userForm.form.valid}} -->
+        </div>
+    <div class="event_category" >
+        <p>1.What is the Category of your Event?</p>
+        
+        <button class="button" name="btn" *ngFor="let category of category" >{{category}}</button>
+
+    </div>
+
+  
+    <div class="toggle">
+        <p>2.Is this a Private or Public Event?</p>
+            <mat-button-toggle-group aria-label="Font Style" name="toggle" [ngModel]="item.toggle">
+                <mat-button-toggle  value="private">Private</mat-button-toggle>
+                <mat-button-toggle value="public">Public</mat-button-toggle>
+            </mat-button-toggle-group>
+    </div>
+    
+    <div class="event_date">
+        <p>3.When will this Event be?</p>
+           <mat-form-field appearance="fill" >
+            <select   #date="ngModel"  matNativeControl  name="schedule1"  [ngModel]="item.schedule1" >
+                <option value="">I am interested </option>
+                <option *ngFor="let schedule of schedules">{{schedule}}</option>
+            </select>
+           </mat-form-field>
+           <br>
+
+        <mat-form-field appearance="fill" >
+            <select required matNativeControl  #date="ngModel"  name="schedule2" [ngModel]="item.schedule2" >
+                <option *ngFor="let schedule2 of schedules2">{{schedule2}}</option>
+            </select>
+        </mat-form-field> <br>
+        
+        <div class="start"><p>Starts &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   End By</p></div>
+        
+        <mat-form-field class="start_date" appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker1" name="start_date" [ngModel]="item.start_date">
+            <mat-datepicker-toggle matSuffix [for]="picker1" ></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+          
+        
+        <mat-form-field class="end_date" appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input  matInput [matDatepicker]="picker" name="end_date" [ngModel]="item.end_date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>  <br>
+
+        <div class="start_time"> 
+            <p>Time</p>  
+            <input [ngxTimepicker]="picker3" name="start_time" [ngModel]="item.start_time">
+            <ngx-material-timepicker #picker3 ></ngx-material-timepicker>
+        </div> <div class="time_icon"></div>
+        
+        <div class="end_time">
+            <input [ngxTimepicker]="picker4" name="end_time"  [ngModel]="item.end_time">
+            <ngx-material-timepicker #picker4 ></ngx-material-timepicker>
+        </div>
+    </div>
+
+ 
+    <div class="event_title">
+      
+        <label >4.Event Title</label>
+        <input type="text" required name="title"[(ngModel)]="item.event_title">
+       <br>
+       <!-- <small [class.d-none]="registrationform.get('eventtitle').valid || registrationform.get('eventtitle').untouched" class="text-danger" style="color: rgb(221, 11, 39);" >Event Title is required</small> -->
+       <!-- <div *ngIf="title.errors && (title.valid || title.untouched)">
+        <small class="text-danger" *ngIf="title.errors.required">Event Title is required</small> </div> -->
+    </div>
+
+
+    <div class="event_about">
+        <p>5.What is this Event about? </p>
+        <textarea  name="event_about" [ngModel]="item.event_about"></textarea>
+    </div>
+
+    <div class="picture_upload">
+        <p>6.Event's Picture </p>
+        <p>Upload Main Image</p>
+        <div class="upload"> 
+           <ngx-dropzone (change)="onSelect($event)">
+                <ngx-dropzone-label>Drag & Drop to Upload</ngx-dropzone-label>
+                    <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview"   *ngFor="let f of files" [file]="f" [multiple]="true" [removable]="true" (removed)="onRemove(f)">
+                        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                    </ngx-dropzone-image-preview>
+            </ngx-dropzone>
+        </div>
+
+        <img src="{{item.event_image}}" width="200" height="150px" style="margin-left: 150px; margin-top: 20px;">
+    </div>
+        <button type="submit">Submit form</button>
+</div>
+</form>
